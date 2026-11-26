@@ -24,12 +24,16 @@
           <p>决策模型正在成为 AI 的一个重要方向。大语言模型擅长生成文本、推理复杂问题，而决策模型专注于直接的结构化结果。当判断、分类和行动选择能够以更低的成本、更高的性能完成，许多应用就有了新的可能。</p>
           <p>今天，我们推出 <strong class="model-emphasis">LightDecision-1</strong>，面向快速决策和评分的新模型。它接收文本、图像与自然语言描述的候选项，通过专门设计的决策头完成联合判断，以统一的概率接口连接文本判断与视觉行动，覆盖通用决策和工具调用，也能完成视觉评估、游戏决策与具身任务中的行动选择。我们提供 <strong class="model-emphasis">4B</strong> 和 <strong class="model-emphasis">27B</strong> 两种尺寸，他们支持无上限且开放词表的选项，选项之间的语义保持交互且顺序无关，这些性质让它们在文本通用决策、软标签概率预测、游戏、具身等多模态场景下展现出卓越能力。 </p>
         </header>
-        <div class="prose model-downloads" role="group" aria-label="技术报告与模型权重">
+        <div class="prose model-downloads" role="group" aria-label="技术报告、源代码与模型权重">
           <button class="model-download" type="button" disabled aria-label="技术报告（暂未开放）">
             <svg width="19" height="21" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 1.5h8.8l4.2 4.2v14.8h-13z"/><path d="M12 2v4h4M6.5 10h7M6.5 13h7M6.5 16h4"/></svg>
             <span>技术报告</span>
           </button>
 
+          <a class="model-download" href="https://github.com/LightDecision/lightdecision-1" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            <span>GitHub</span>
+          </a>
           <a class="model-download" href="https://huggingface.co/shenjunhao/lightdecision-1-4b" target="_blank" rel="noopener" aria-label="LightDecision-1 4B · Hugging Face">
             <span class="hf-mark" aria-hidden="true">🤗</span>
             <span>LightDecision-1 4B</span>
@@ -2774,7 +2778,6 @@
               <li data-model="jev114" style="--legend-color:#E6E6E6"><img src="assets/model-icons/jev114.png" alt="" width="16" height="16"><a href="https://typesafe.ai/blog/jev-1-14" target="_blank" rel="noopener">Jev 1.14</a></li>
               <li data-model="pplx" style="--legend-color:#E6E6E6"><img src="assets/model-icons/pplx.ico" alt="" width="16" height="16"><a href="https://huggingface.co/perplexity-ai/pplx-decider-v1-27b" target="_blank" rel="noopener">Perplexity Decider-V1</a></li>
               <li data-model="intern" style="--legend-color:#E6E6E6"><img src="assets/model-icons/intern.png" alt="" width="16" height="16"><a href="https://huggingface.co/internlm/Intern-Decision-4B" target="_blank" rel="noopener">Intern-Decision-4B</a></li>
-              <li data-model="h2o" style="--legend-color:#E6E6E6"><span class="legend-monogram" aria-hidden="true">H</span><a href="https://huggingface.co/h2oai/h2o-lightning-4b" target="_blank" rel="noopener">H2O-Lightning-4B</a></li>
             </ul>
             <figcaption>每档使用不同的 MMDM 题集，同档模型回答相同的问题。准确率以全部题目为分母，未能作答计为错误。两款 LightDecision 模型均在全部题目上返回有效预测。前三档的请求预算为 65,536 个 token，1,024 个选项时为 131,072 个 token。</figcaption>
             <script id="option-generalization-data" type="application/json">{
@@ -2808,12 +2811,6 @@
       "label": "Intern-Decision-4B",
       "icon": "assets/model-icons/intern.png",
       "color": "#E6E6E6"
-    },
-    {
-      "id": "h2o",
-      "label": "H2O-Lightning-4B",
-      "icon": null,
-      "color": "#E6E6E6"
     }
   ],
   "views": {
@@ -2844,11 +2841,6 @@
           "total": 36,
           "correct": 7,
           "accuracy": 0.19444444444444445
-        },
-        "h2o": {
-          "total": 36,
-          "correct": 8,
-          "accuracy": 0.2222222222222222
         }
       }
     },
@@ -2876,11 +2868,6 @@
           "accuracy": 0.0
         },
         "intern": {
-          "total": 26,
-          "correct": 0,
-          "accuracy": 0.0
-        },
-        "h2o": {
           "total": 26,
           "correct": 0,
           "accuracy": 0.0
@@ -2914,11 +2901,6 @@
           "total": 42,
           "correct": 1,
           "accuracy": 0.023809523809523808
-        },
-        "h2o": {
-          "total": 42,
-          "correct": 2,
-          "accuracy": 0.047619047619047616
         }
       }
     },
@@ -2946,11 +2928,6 @@
           "accuracy": 0.0
         },
         "intern": {
-          "total": 26,
-          "correct": 0,
-          "accuracy": 0.0
-        },
-        "h2o": {
           "total": 26,
           "correct": 0,
           "accuracy": 0.0

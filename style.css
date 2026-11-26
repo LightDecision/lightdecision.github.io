@@ -21,7 +21,9 @@ html,body{background:#fff}.masthead{height:100px;max-width:1160px;padding:0 40px
 .calibration-tabs button{font:inherit;font-size:12px;line-height:1.6;padding:5px 17px;border:0;border-radius:3px;background:transparent;color:#81847c;cursor:pointer;transition:background-color .2s,color .2s}
 .calibration-tabs button[aria-selected="true"]{background:#f0e7c5;color:#786023}
 .calibration-tabs button:focus-visible{outline:2px solid #B49A42;outline-offset:3px}
-.calibration-model-legend{justify-content:flex-start;margin:22px 0 0;gap:15px 24px}
+.calibration-figure .model-legend,
+#option-generalization .model-legend { justify-content: center; }
+.calibration-model-legend{margin:22px 0 0;gap:15px 24px}
 .calibration-model-legend .cal-baseline-key{border-bottom-style:dashed}
 
 .calibration-plot-scroll{overflow-x:auto;overflow-y:hidden}
